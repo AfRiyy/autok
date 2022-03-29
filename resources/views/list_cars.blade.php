@@ -1,27 +1,28 @@
 @extends('layouts.master')
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row my-3">
         <div class="col-6">
-            <form action="">
-                <select id="" name="color">
+            <form action="" class="d-inline-flex">
+                <select class="form-select" id="" name="color">
                     <option selected>Szín</option>
                     <option>Kék</option>
                     <option>Sárga</option>
                     <option>Piros</option>
                     <option>Fekete</option>
                 </select>
-                <button class="btn btn-outline-info" type="submit">Keresés</button>
+                <button class="btn btn-outline-info mx-2" type="submit">Keresés</button>
             </form>
+            <a class="btn btn-outline-primary" href="/new-car">Új autó</a>
         </div>
         <div class="col-6">
-            <a href="/register">Regisztráció</a>
-            <a href="/login">Bejelentkezés</a>
-            <a href="/logout">Kijelentkezés</a>
+            <a class="btn btn-outline-info mb-1" href="/register">Regisztráció</a>
+            <a class="btn btn-outline-info mb-1" href="/login">Bejelentkezés</a>
+            <a class="btn btn-outline-danger mb-1" href="/logout">Kijelentkezés</a>
         </div>
-        <div class="row">
-            <div class="col-8">
-                <table class="table table-stripped">
+        <div class="row my-3">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <table class="table table-striped">
                     <thead>
                         <th scope="col">Id</th>
                         <th scope="col">Rendszám</th>
@@ -46,9 +47,6 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
-            <div class="col-2">
-            <a class="btn btn-outline-primary" href="/new-car">Új autó</a>
             </div>
         </div>
     </div>
